@@ -338,7 +338,7 @@
         )
         .join("")}</div>`,
     ticker: () => {
-      const w = ["Campaign", "Content", "Media", "Performance", "Film", "OOH"]
+      const w = ["Campaign", "Content", "Media", "Performance",]
         .map((s) => `<span>${s} ✦</span>`)
         .join("");
       return `<div class="strip strip--ticker" aria-hidden="true"><div>${w}${w}</div></div>`;
