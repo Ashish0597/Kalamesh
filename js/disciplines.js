@@ -41,16 +41,15 @@
     },
     {
       type: "video",
-       src: "videos/video3.mp4",
-      title: "Liquid Metal",
+      src: "videos/video3.mp4",
       tag: "3D / CGI",
       cat: "cgi",
       ratio: "1/1",
     },
     {
-      type: "image",
-      src: U("photo-1747191092806-c7da11881986"),
-      title: "Clay Study",
+      type: "video",
+      src: "videos/video4.mp4",
+      title: "Anime",
       tag: "Visual production",
       cat: "production",
       ratio: "4/5",
@@ -80,22 +79,8 @@
       cat: "cgi",
       ratio: "1/1",
     },
-    {
-      type: "image",
-      src: U("photo-1770062422885-2dfcbe8fb65b"),
-      title: "Poise",
-      tag: "Visual production",
-      cat: "production",
-      ratio: "4/5",
-    },
-    {
-      type: "image",
-      src: U("photo-1726910133626-9b573eca70ff"),
-      title: "Fins",
-      tag: "Digital scene",
-      cat: "spatial",
-      ratio: "3/2",
-    },
+   
+    
   ];
   const FILTERS = [
     ["all", "All"],
@@ -338,7 +323,7 @@
         )
         .join("")}</div>`,
     ticker: () => {
-      const w = ["Campaign", "Content", "Media", "Performance",]
+      const w = ["Campaign", "Content", "Media", "Performance"]
         .map((s) => `<span>${s} ✦</span>`)
         .join("");
       return `<div class="strip strip--ticker" aria-hidden="true"><div>${w}${w}</div></div>`;
@@ -409,12 +394,12 @@
           <section class="brand-work" id="brand-work">
             <p class="view-kicker">SELECTED WORK</p>
             <div class="brand-work-grid">
-              <img src="./images/brand01.png"  alt="Warm, editorial interior project" loading="lazy">
-              <img src="./images/brand01.png"  alt="Digital design presentation" loading="lazy">
-              <img src="./images/brand01.png"  alt="Hospitality space visualisation" loading="lazy">
-              <img src="./images/brand01.png"  alt="Stationery and print design" loading="lazy">
+              <img src="./images/brand05.webp"  alt="Warm, editorial interior project" loading="lazy">
+              <img src="./images/brand06.webp"  alt="Digital design presentation" loading="lazy">
+              <img src="./images/brand07.webp"  alt="Hospitality space visualisation" loading="lazy">
+              <img src="./images/brand10.webp"  alt="Stationery and print design" loading="lazy">
               <img src="./images/brand09.png"  alt="Architectural campaign visual" loading="lazy">
-              <img src="./images/brand01.png"  alt="Contemporary interior mood and material palette" loading="lazy">
+              <img src="./images/brand08.webp"  alt="Contemporary interior mood and material palette" loading="lazy">
             </div>
           </section>
           <section class="brand-make"><h2>What we make</h2><div class="brand-make-grid">
@@ -428,12 +413,10 @@
       const jump = bodyEl.querySelector("[data-brand-scroll]");
       if (jump)
         jump.addEventListener("click", () =>
-          bodyEl
-            .querySelector("#brand-work")
-            ?.scrollIntoView({
-              behavior: reduceMotion ? "auto" : "smooth",
-              block: "start",
-            }),
+          bodyEl.querySelector("#brand-work")?.scrollIntoView({
+            behavior: reduceMotion ? "auto" : "smooth",
+            block: "start",
+          }),
         );
       stopVideos();
       return;

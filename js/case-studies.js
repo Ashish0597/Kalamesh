@@ -9,7 +9,7 @@
   const CREDIT =
     "Campaigns by Yesha Bhayani · Performance Marketing · Real Estate & D2C · Mumbai";
   const EMAIL = "hello@kalamesh.com";
-  const WHATSAPP = "https://wa.me/91XXXXXXXXXX"; // same number as the floating WhatsApp button
+  const WHATSAPP = "https://wa.me/919987556474";
 
   const D = {
     hero: {
