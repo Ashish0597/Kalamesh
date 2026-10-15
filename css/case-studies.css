@@ -536,3 +536,71 @@
     display: none;
   }
 }
+
+
+/* FIXED selectors: the overlay is .view-panel, not #viewPanel[data-theme]. */
+.view-panel .view-nav {
+  background: #f7f7f7 !important;
+  color: #080808 !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+}
+.view-panel .view-nav button,
+.view-panel .view-nav a,
+.view-panel .view-nav .view-counter,
+.view-panel .view-nav .view-counter b {
+  color: #080808 !important;
+}
+.view-panel .view-nav .view-counter b { color: #ff1717 !important; }
+.view-panel:has(.cs) .view-counter { display: none !important; }
+
+/* Keep the marketing credit; remove only its excessive top spacing. */
+.view-panel .cs .cs-credit {
+  display: block !important;
+  margin: 0 0 10px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+/* CTA contrast: readable labels on both buttons. */
+.view-panel .cs .cs-btn--red,
+.view-panel .cs .cs-btn--red span {
+  color: #ffffff !important;
+}
+.view-panel .cs .cs-btn:not(.cs-btn--red),
+.view-panel .cs .cs-btn:not(.cs-btn--red) span {
+  color: #ffffff !important;
+}
+.view-panel .cs .cs-btn--red:hover,
+.view-panel .cs .cs-btn--red:hover span {
+  background: #ff1717 !important;
+  color: #ffffff !important;
+}
+
+
+/* Final targeted marketing fixes only; original robot/hero assets are untouched. */
+.view-panel:has(.cs) {
+  --bg: #050505;
+  --fg: #f4f4f4;
+  --muted: #c9c9c9;
+  --line: #292929;
+  background: #050505 !important;
+  color: #f4f4f4;
+}
+.view-panel:has(.cs) .view-hero,
+.view-panel:has(.cs) .view-meta,
+.view-panel:has(.cs) .approach,
+.view-panel:has(.cs) .view-footer {
+  background: #050505 !important;
+  color: #f4f4f4 !important;
+}
+.view-panel:has(.cs) .view-meta > span:last-child { display: none !important; }
+.view-panel:has(.cs) .cs-credit {
+  display: block !important;
+  margin: 0 0 10px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+.view-panel:has(.cs) .cs-btn--red { background: #ff1717 !important; color: #fff !important; }
+.view-panel:has(.cs) .cs-btn--red span,
+.view-panel:has(.cs) .cs-btn:not(.cs-btn--red),
+.view-panel:has(.cs) .cs-btn:not(.cs-btn--red) span { color: #fff !important; }

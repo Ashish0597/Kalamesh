@@ -379,6 +379,12 @@
     numEl.textContent = d.number;
     panel.dataset.theme = key;
     const isMedia = key === "visualisation";
+    if (key === "gtm" && window.kalameshGTMHTML) {
+      bodyEl.innerHTML = window.kalameshGTMHTML();
+      panel.scrollTop = 0;
+      stopVideos();
+      return;
+    }
     if (key === "branding") {
       bodyEl.innerHTML = `
         <div class="brand-page">
